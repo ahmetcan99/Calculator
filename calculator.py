@@ -21,6 +21,7 @@ class Ui_Form(object):
         font.setWeight(75)
         self.lineEdit.setFont(font)
         self.lineEdit.setLayoutDirection(QtCore.Qt.LayoutDirection.RightToLeft)
+        self.lineEdit.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight)
         self.lineEdit.setText("")
         self.lineEdit.setObjectName("lineEdit")
         self.widget = QtWidgets.QWidget(parent=Form)
@@ -283,7 +284,7 @@ class Ui_Form(object):
             result = eval(self.lineEdit.text())
             self.lineEdit.setText(str(result))
         except:
-            self.lineEdit.setText("")
+            self.lineEdit.setText("HATALI")
 
     def ButtonDot(self):
         yazi = self.lineEdit.text() + "."
